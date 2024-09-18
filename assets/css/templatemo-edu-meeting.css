@@ -1260,7 +1260,28 @@ section.our-facts {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 140px 0px 125px 0px;
+  padding: 140px 0 125px 0;
+}
+
+@media (max-width: 1200px) {
+  section.our-facts {
+    padding: 100px 0 90px 0;
+    background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  section.our-facts {
+    padding: 80px 0 70px 0;
+    background-attachment: scroll; /* Change fixed attachment on smaller screens for better performance */
+  }
+}
+
+@media (max-width: 480px) {
+  section.our-facts {
+    padding: 60px 0 50px 0;
+    background-size: contain; /* Ensure full visibility of background image on small screens */
+  }
 }
 
 section.our-facts h2 {
@@ -1684,7 +1705,7 @@ section.meetings-page .pagination ul li a:hover {
 	width: 31%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 767px) {
 	.templatemo-item-col {
 		width: 45%;
 	}
@@ -1828,4 +1849,24 @@ responsive
     color: #1f272b;
   }
 
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* Mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  /* styles for mobile devices */
+}
+
+/* Tablets (min-width: 769px and max-width: 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* styles for tablets */
+}
+
+/* Desktop devices (min-width: 1025px) */
+@media only screen and (min-width: 1025px) {
+  /* styles for desktop devices */
 }
